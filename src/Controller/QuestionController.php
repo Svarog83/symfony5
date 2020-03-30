@@ -13,7 +13,7 @@ class QuestionController extends AbstractController {
 	 * @Route("/", name="app_homepage")
 	 */
 	public function homepage(): Response {
-		return $this->render('question/homepag e.html.twig');
+		return $this->render('question/homepage.html.twig');
 	}
 
 	/**
