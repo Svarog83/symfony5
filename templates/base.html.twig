@@ -12,6 +12,9 @@
 			  integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"/>
 		<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 	{% endblock %}
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/apple-touch-icon.png') }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32x32.png') }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon-16x16.png') }}">
 </head>
 <body>
 <nav class="navbar navbar-light bg-light" style="height: 100px;">
@@ -27,6 +30,9 @@
 	Made with <i style="color: red;" class="fa fa-heart"></i> by the guys and gals at <a
 			style="color: #444; text-decoration: underline;" href="https://symfonycasts.com">SymfonyCasts</a>
 </footer>
-{% block javascripts %}{% endblock %}
+{% block javascripts %}
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+			crossorigin="anonymous"></script>
+{% endblock %}
 </body>
 </html>
