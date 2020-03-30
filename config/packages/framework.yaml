@@ -1,6 +1,8 @@
 framework:
     #ide: 'phpstorm://open?url=file://%%f&line=%%l'
-    ide: 'phpstorm://open?file=%%f&line=%%l&/var/www/html/>C:/Webservers/home/symfony5/'
+    #ide: 'phpstorm://open?file=%%f&line=%%l&/var/www/html/>C:/Webservers/home/symfony5/'
+    #http://localhost:8091/?message=C:\OpenServer\domains\oms30.ru\OMS\Modules\InspectionModule\InspectionModule.php:743
+    ide: 'http://localhost:8091/?message=%%f:%%l&/var/www/html/>C:/OpenServer/domains/symfony5/'
     secret: '%env(APP_SECRET)%'
     #csrf_protection: true
     #http_method_override: true
