@@ -7,13 +7,21 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Twig\Environment;
 
 class QuestionController extends AbstractController {
 	/**
 	 * @Route("/", name="app_homepage")
+	 * @param Environment $twig
+	 * @return Response
+	 * @throws \Twig\Error\LoaderError
+	 * @throws \Twig\Error\RuntimeError
+	 * @throws \Twig\Error\SyntaxError
 	 */
-	public function homepage(): Response {
-		return $this->render('question/homepage.html.twig');
+	public function homepage(Environment $twig): Response {
+		$html = $twig->render('question/homepage.html.twig');
+
+		return new Response($html);
 	}
 
 	/**
